@@ -8,7 +8,6 @@ import ThemeManager from "./components/ThemeManager";
 function App() {
   return (
     <>
-      <HashRouter>
         <ThemeManager />
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -17,7 +16,6 @@ function App() {
 
           <Route path="/settings" element={<Settings />} />
         </Routes>
-      </HashRouter>
     </>
   );
 }
