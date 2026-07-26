@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route, HashRouter } from "react-router";
 
 import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
@@ -8,14 +8,16 @@ import ThemeManager from "./components/ThemeManager";
 function App() {
   return (
     <>
-      <ThemeManager />
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
+      <HashRouter>
+        <ThemeManager />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
 
-        <Route path="/students" element={<Students />} />
+          <Route path="/students" element={<Students />} />
 
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </HashRouter>
     </>
   );
 }
